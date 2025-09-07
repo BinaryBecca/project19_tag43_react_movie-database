@@ -1,3 +1,5 @@
+import Buttons from "../buttons/Buttons"
+
 interface HeaderProps {
   sortingMoviesButtons: (movie: string) => void
 }
@@ -5,23 +7,15 @@ interface HeaderProps {
 export default function Header({ sortingMoviesButtons }: HeaderProps) {
   return (
     <>
-      <div className="flex flex-row justify-evenly mt-5">
-        <button className="border p-3 cursor-pointer" onClick={() => sortingMoviesButtons("dateUp")}>
-          Sort by Date Ascending
-        </button>
-        <button className="border p-3 cursor-pointer" onClick={() => sortingMoviesButtons("dateDown")}>
-          Sort by Date Descending
-        </button>
-        <button className="border p-3 cursor-pointer" onClick={() => sortingMoviesButtons("bestRate")}>
-          Best Rate
-        </button>
-        <button className="border p-3 cursor-pointer" onClick={() => sortingMoviesButtons("a-z")}>
-          A-Z
-        </button>
-        <button className="border p-3 cursor-pointer" onClick={() => sortingMoviesButtons("z-a")}>
-          Z-A
-        </button>
-      </div>
+      <header className="fixed top-0 left-0 w-full z-10">
+        <div className="flex flex-row justify-evenly p-5">
+          <Buttons onClick={() => sortingMoviesButtons("dateUp")} buttonName="Sort by Date Ascending" />
+          <Buttons onClick={() => sortingMoviesButtons("dateDown")} buttonName="Sort by Date Descending" />
+          <Buttons onClick={() => sortingMoviesButtons("bestRate")} buttonName="Best Rate" />
+          <Buttons onClick={() => sortingMoviesButtons("a-z")} buttonName="A-Z" />
+          <Buttons onClick={() => sortingMoviesButtons("z-a")} buttonName="Z-A" />
+        </div>
+      </header>
     </>
   )
 }

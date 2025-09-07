@@ -1,7 +1,8 @@
 import { useState } from "react"
-import Header from "./components/header/Header"
-import MovieOverview from "./pages/movieOverview/MovieOverview"
+// import Header from "./components/header/Header"
+// import MovieOverview from "./pages/movieOverview/MovieOverview"
 import moviesData from "./data"
+import Layout from "./pages/layout/Layout"
 
 function App() {
   const [sortingMovies, setSortingMovies] = useState(moviesData)
@@ -25,8 +26,9 @@ function App() {
   }
   return (
     <>
-      <Header sortingMoviesButtons={sortingBy} />
-      <MovieOverview movieList={sortingMovies} />
+      {/* <Header sortingMoviesButtons={sortingBy} />
+      <MovieOverview movieList={sortingMovies} /> */}
+      <Layout sortingMoviesButtons={sortingBy} movieList={sortingMovies} />
     </>
   )
 }

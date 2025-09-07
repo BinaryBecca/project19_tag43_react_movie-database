@@ -1,14 +1,14 @@
 import type { IMovie } from "./interfaces/IMovie"
 
 const moviesData: IMovie[] = [
-  {
-    title: "a",
-    year: "1",
-    director: "gru",
-    duration: "1h",
-    genre: ["Crime", "Drama"],
-    rate: "1",
-  },
+  // {
+  //   title: "a",
+  //   year: "1",
+  //   director: "gru",
+  //   duration: "1h",
+  //   genre: ["Crime", "Drama"],
+  //   rate: "1",
+  // },
   {
     title: "The Shawshank Redemption",
     year: "1994",
